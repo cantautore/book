@@ -12,26 +12,52 @@
 
 <div id="cookie-banner">
 
+<h3>Cookie- und Datenschutzhinweis</h3>
+
 <p>
-Diese Webseite verwendet technisch notwendige Cookies und vergleichbare Technologien.
-Beim Besuch können technische Daten (z. B. IP-Adresse, Browserinformationen und Zugriffszeit)
-zur sicheren Bereitstellung der Webseite verarbeitet werden.
-
-Das KI-Analysewerkzeug dient ausschließlich der musikalischen Analyse.
-Eingaben werden nicht dauerhaft gespeichert und nicht zur Erstellung persönlicher Nutzerprofile verwendet.
-
-Mit Klick auf „Akzeptieren“ bestätigst Du, dass Du die Datenschutzhinweise gelesen hast.
+Diese Webseite verwendet ausschließlich technisch notwendige Cookies und
+vergleichbare Technologien, die für den sicheren Betrieb und die Darstellung
+der Inhalte erforderlich sind.
 </p>
 
-<a href="datenschutz.html" target="_blank">
-Datenschutzhinweise
-</a>
+<p>
+Beim Besuch dieser Webseite können technische Daten wie IP-Adresse,
+Browserinformationen und Zeitpunkt des Zugriffs verarbeitet werden, um die
+Bereitstellung und Sicherheit der Webseite zu gewährleisten.
+</p>
+
+<p>
+Diese Webseite wird über externe technische Dienste bereitgestellt.
+Das eingebundene KI-Analysewerkzeug dient ausschließlich der musikalischen
+Analyse. Die vom Nutzer eingegebenen Inhalte werden nicht dauerhaft gespeichert
+und nicht zur Erstellung persönlicher Nutzerprofile verwendet.
+</p>
+
+<p>
+Mit Klick auf „Akzeptieren“ bestätigst Du, diesen Hinweis gelesen zu haben und
+stimmst der beschriebenen Verarbeitung technisch notwendiger Daten zu.
+</p>
 
 <button onclick="acceptCookies()">
 Akzeptieren
 </button>
 
 </div>
+
+
+<script>
+
+function acceptCookies() {
+    localStorage.setItem("privacyAccepted", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+}
+
+
+if (localStorage.getItem("privacyAccepted")) {
+    document.getElementById("cookie-banner").style.display = "none";
+}
+
+</script>
 
 
 <script>
