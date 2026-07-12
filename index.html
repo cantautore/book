@@ -10,6 +10,44 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
+<div id="cookie-banner">
+
+<p>
+Diese Webseite verwendet technisch notwendige Cookies und vergleichbare Technologien.
+Beim Besuch können technische Daten (z. B. IP-Adresse, Browserinformationen und Zugriffszeit)
+zur sicheren Bereitstellung der Webseite verarbeitet werden.
+
+Das KI-Analysewerkzeug dient ausschließlich der musikalischen Analyse.
+Eingaben werden nicht dauerhaft gespeichert und nicht zur Erstellung persönlicher Nutzerprofile verwendet.
+
+Mit Klick auf „Akzeptieren“ bestätigst Du, dass Du die Datenschutzhinweise gelesen hast.
+</p>
+
+<a href="datenschutz.html" target="_blank">
+Datenschutzhinweise
+</a>
+
+<button onclick="acceptCookies()">
+Akzeptieren
+</button>
+
+</div>
+
+
+<script>
+
+function acceptCookies() {
+    localStorage.setItem("cookieAccepted", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+}
+
+
+if (localStorage.getItem("cookieAccepted")) {
+    document.getElementById("cookie-banner").style.display = "none";
+}
+
+</script>
+
 <body>
 
 <header>
