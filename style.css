@@ -128,32 +128,30 @@ footer {
     display:none;
 }
 
-}
 #cookie-banner {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: white;
+    background: #ffffff;
     border-top: 1px solid #ccc;
-    padding: 20px;
+    padding: 25px;
     box-sizing: border-box;
     z-index: 9999;
     font-size: 14px;
     line-height: 1.5;
 }
 
-#cookie-banner p {
-    max-width: 1000px;
-    margin: 0 auto 10px auto;
+#cookie-banner h3 {
+    margin-top: 0;
 }
 
-#cookie-banner a {
-    margin-left: 20px;
+#cookie-banner p {
+    max-width: 1100px;
 }
 
 #cookie-banner button {
-    margin-left: 20px;
-    padding: 8px 18px;
+    padding: 10px 25px;
+    margin-top: 10px;
     cursor: pointer;
 }
