@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Il Cantautore – Daniele Coscia</title>
+
+<!-- Verweist auf das style.css im Hauptordner, damit das Design exakt gleich bleibt -->
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<div id="cookie-banner">
+
+<h3>Informativa sui cookie e sulla privacy</h3>
+
+<p>
+Questo sito web utilizza esclusivamente cookie tecnici ed essenziali e tecnologie
+simili, necessari per il funzionamento sicuro e la corretta visualizzazione
+dei contenuti.
+</p>
+
+<p>
+Durante la visita a questo sito web, possono essere elaborati dati tecnici come
+l'indirizzo IP, le informazioni sul browser e l'orario di accesso, al fine di
+garantire l'erogazione e la sicurezza del sito stesso.
+</p>
+
+<p>
+Questo sito web viene fornito tramite servizi tecnici esterni.
+Lo strumento di analisi basato su intelligenza artificiale (IA) integrato serve
+esclusivamente all'analisi musicale. I contenuti inseriti dall'utente non vengono
+memorizzati in modo permanente e non vengono utilizzati per creare profili utente personali.
+</p>
+
+<p>
+Facendo clic su "Accetta", confermi di aver letto questa informativa e acconsenti
+al trattamento descritto dei dati tecnici strettamente necessari.
+</p>
+
+<button onclick="acceptCookies()">
+Accetta
+</button>
+
+</div>
+
+
+<script>
+
+function acceptCookies() {
+    localStorage.setItem("privacyAccepted", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+}
+
+if (localStorage.getItem("privacyAccepted")) {
+    document.getElementById("cookie-banner").style.display = "none";
+}
+
+</script>
+
+
+<script>
+
+function acceptCookies() {
+    localStorage.setItem("cookieAccepted", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+}
+
+if (localStorage.getItem("cookieAccepted")) {
+    document.getElementById("cookie-banner").style.display = "none";
+}
+
+</script>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+IL CANTAUTORE
+</div>
+
+<div class="menu">
+<a href="#libro">Il libro</a>
+<a href="#ia">Verifica IA Musica</a>
+<a href="#autore">Autore</a>
+<a href="#contatto">Contatto</a>
+<a href="../index.html" style="font-weight: bold; margin-left: 15px;">DE</a>
+</div>
+
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+Il Cantautore
+</h1>
+
+<h2>
+Saggio per una definizione<br>
+della canzone d'autore
+</h2>
+
+<p>
+Un libro scritto con approccio storico-culturale e saggistico
+sullo speciale legame tra testo, musica e messaggio personale.
+</p>
+
+<p class="author">
+Daniele Coscia<br>
+Autore e pubblicista
+</p>
+<p>
+ISBN: 978-3-00-83512-6 | Prezzo: 14,90,- Euro
+</p>
+
+</div>
+
+
+<div class="hero-cover">
+<!-- Verweist auf das Bild im Hauptordner -->
+<img src="../coverBuch.png" alt="Copertina del libro Il Cantautore">
+
+</div>
+
+</section>
+<section id="libro">
+
+<h2>Il libro</h2>
+
+<p>
+Cantautore, singer-songwriter, chansonnier – o comunque si voglia chiamarli.
+L'alta forma dell'arte della canzone ha molti nomi, ma raramente ci si chiede
+se dietro di essi si nasconda un artigianato comune. Esistono criteri nascosti,
+tangibili dal punto di vista musicologico, che distinguono quest'arte dalla semplice
+musica pop? E se sì: come si possono descrivere senza che la magia si dissolva?
+</p>
+
+<p>
+Questa indagine affronta questa domanda – e una seconda, più pratica:
+è necessario avere il talento di un Lucio Dalla o di un Leonard Cohen, oppure un
+musicista può fare propri questi criteri? Può contrapporre qualcosa di duraturo
+alla superficialità acustica e accelerata del nostro tempo?
+</p>
+
+<p>
+Il viaggio inizia proprio dove quest'arte della canzone è cresciuta in modo più fitto
+e senza compromessi: in Italia. E termina in America. Nel mezzo si snoda un cammino
+musicale fatto di profondità, di storia – e, a dire il vero, anche di qualche bar.
+Non è un semplice saggio accademico, non è assolutamente un romanzo e nemmeno un saggio
+in senso stretto. Ciò che è, è difficile da definire – ma più facile da indirizzare.
+</p>
+
+<p>
+L'ho scritto per te, lettore appassionato di musica, che vuoi capire perché una canzone
+resta mentre altre mille svaniscono. Per te, amante dei suoni italofili, che vuoi tracciare
+la linea che unisce Sanremo a New York. E per te, autore di canzoni – che non cerchi il successo
+rapido, ma l'effetto a lungo termine. 
+Per chiunque voglia ampliare i propri orizzonti musicali e non ha paura che il percorso
+per arrivarci possa essere, a volte, tortuoso.
+</p>
+
+</section>
+
+
+<section id="ia">
+
+<h2>Verifica IA Musica</h2>
+
+<p>
+Hai letto il libro? Ora scegli alcuni brani e chiediti fino a che punto si tratti di canzone
+d'autore o dell'opera di un cantautore. Scoprilo con il nostro sofisticato strumento basato
+sulla tecnologia IA. Esempio di domanda: "Herzilein" dei Wildecker Herzbuben è un'opera da cantautore?
+</p>
+<iframe 
+  id="ki-tool"
+  src="https://cantautore-analyse-assistent.ai.studio"
+  width="100%"
+  height="870"
+  style="border: none; border-radius: 3px; overflow: hidden;"
+  allow="microphone">
+</iframe>
+
+<script>
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 1000);
+});
+</script>
+</section>
+
+
+<section id="autore">
+
+<h2>L'autore</h2>
+
+<p>
+Daniele Coscia è autore e pubblicista.
+Il suo lavoro si concentra sul perché determinate cose riescano a esercitare un impatto
+speciale – che si tratti dell'effetto "WOW" nascosto in un design o delle caratteristiche
+difficilmente afferrabili dell'arte e della musica.
+L'autore persegue l'idea di rendere visibile ciò che sembra indescrivibile e di rendere
+comprensibile la percezione intuitiva attraverso strutture riconoscibili.
+
+Nell'autunno del 2026 uscirà il suo prossimo libro:
+„Design – Der WOW-Effekt“ (Design – L'effetto WOW).
+</p>
+
+</section>
+
+
+<section id="contatto">
+
+<h2>Contatto</h2>
+
+<p>
+Le informazioni di contatto seguiranno a breve.
+</p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+© Daniele Coscia – Il Cantautore
+</footer>
+
+</body>
+
+</html>
