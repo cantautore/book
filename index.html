@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
-
+<script>
+  // Erkennt automatisch die Browsersprache des Besuchers
+  const userLang = navigator.language || navigator.userLanguage; 
+  
+  // Wenn der Besucher Italienisch als Sprache nutzt, wird er sofort weitergeleitet
+  if (userLang.startsWith('it')) {
+    window.location.href = '/it/';
+  }
+</script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
